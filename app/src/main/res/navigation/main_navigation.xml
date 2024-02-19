@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation.xml"
+    app:startDestination="@id/listUserFragment">
+
+    <fragment
+        android:id="@+id/listUserFragment"
+        android:name="com.example.usersgithubtesttask.presentation.ListUserFragment"
+        android:label="fragment_list_user"
+        tools:layout="@layout/fragment_list_user" >
+        <action
+            android:id="@+id/action_listUserFragment_to_userItemFragment"
+            app:destination="@id/userItemFragment">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/userItemFragment"
+        android:name="com.example.usersgithubtesttask.presentation.UserItemFragment"
+        android:label="fragment_user_item"
+        tools:layout="@layout/fragment_user_item" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+</navigation>
