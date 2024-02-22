@@ -15,4 +15,9 @@ interface getHubQueryApi {
     @GET("users/{name}")
     fun getUserData(@Path("name") name: String): Single<UserItemData>
 
+    @GET("orgs/{orgName}/repos")
+    fun getOrgReposList(@Path("orgName") orgName: String): Single<List<RepositoryData>>
+
+    @GET("repos/{firstName}/{lastName}")
+    fun getRepository(@Path("firstName") firstName: String, @Path("lastName") lastName: String): Single<RepositoryData>
 }

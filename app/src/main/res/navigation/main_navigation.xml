@@ -12,10 +12,11 @@
         tools:layout="@layout/fragment_list_user" >
         <action
             android:id="@+id/action_listUserFragment_to_userItemFragment"
-            app:destination="@id/userItemFragment">
-        <argument
-            android:name="name"
-            app:argType="string" />
+            app:destination="@id/userItemFragment"
+            app:popUpToInclusive="false">
+            <argument
+                android:name="name"
+                app:argType="string" />
         </action>
     </fragment>
     <fragment
@@ -25,6 +26,26 @@
         tools:layout="@layout/fragment_user_item" >
         <argument
             android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/listOrgRepositoryFragment"
+        android:name="com.example.usersgithubtesttask.presentation.ListOrgRepositoryFragment"
+        android:label="ListOrgRepositoryFragment" >
+        <action
+            android:id="@+id/action_listOrgRepositoryFragment_to_repositoryItemFragment"
+            app:destination="@id/repositoryItemFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/repositoryItemFragment"
+        android:name="com.example.usersgithubtesttask.presentation.RepositoryItemFragment"
+        android:label="RepositoryItemFragment" >
+        <argument
+            android:name="first_name"
+            app:argType="string" />
+        <argument
+            android:name="last_name"
             app:argType="string" />
     </fragment>
 </navigation>

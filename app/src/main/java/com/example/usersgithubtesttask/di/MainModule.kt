@@ -1,8 +1,9 @@
-package com.example.usersgithubtesttask.MainModule
+package com.example.usersgithubtesttask.di
 
 import com.example.usersgithubtesttask.data.ObjectDataGit
 import com.example.usersgithubtesttask.data.getHubQueryApi
 import com.example.usersgithubtesttask.domain.Repository
+import com.example.usersgithubtesttask.presentation.RepositoryListAdapter
 import com.example.usersgithubtesttask.presentation.UsersListAdapter
 import dagger.Module
 import dagger.Provides
@@ -32,5 +33,7 @@ object MainModule {
     @Singleton
     fun provideAdapter(): UsersListAdapter = UsersListAdapter()
 
-
+    @Provides
+    @Singleton
+    fun provideAdapterRepository(): RepositoryListAdapter = RepositoryListAdapter()
 }
