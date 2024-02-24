@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottomItem1"
+        android:icon="@drawable/baseline_accessibility_new_24"
+        android:title="Пользователи" />
+    <item
+        android:id="@+id/bottomItem2"
+        android:icon="@drawable/baseline_account_tree_24"
+        android:title="Репозитарии" />
+</menu>
